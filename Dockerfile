@@ -8,7 +8,8 @@ WORKDIR C:\src\ChatBot
 
 # Copy csproj and restore as distinct layers
 
-COPY C:\src\ChatBot .
+COPY ChatBot.sln .
+COPY ChatBot .
 
 RUN dotnet restore ChatBot.csproj
 
