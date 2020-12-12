@@ -2,14 +2,14 @@
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 
-WORKDIR C:\src\ChatBot
+WORKDIR C:\src
 
  
 
 # Copy csproj and restore as distinct layers
 
-COPY ChatBot.sln .
-COPY ChatBot .
+COPY ChatBot.sln C:\src
+COPY ChatBot C:\src
 
 RUN dotnet restore ChatBot.csproj
 
